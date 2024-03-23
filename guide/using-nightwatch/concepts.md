@@ -264,6 +264,13 @@ Test globals can also be defined in an external file, specified by the `"globals
 
 The external globals file can also contain global test hooks, a custom reporter and other test specific settings. Refer to the [External Globals](https://nightwatchjs.org/guide/using-nightwatch/external-globals.html) section for more details.
 
+<<<<<<< HEAD
 [1]:    https://nightwatchjs.org/guide/running-tests/
 [2]:    https://saucelabs.com
 [3]:    https://browserstack.com
+=======
+
+[1]:	/guide/running-tests/
+[2]:	https://saucelabs.com
+[3]:	https://browserstack.com
+>>>>>>> cf32ae704f3d7552a8488540f1654b955e1038cb

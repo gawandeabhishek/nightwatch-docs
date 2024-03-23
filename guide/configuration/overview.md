@@ -209,6 +209,7 @@ Assuming you have downloaded or installed the ChromeDriver service, the simplest
     <li><a href="/guide/using-nightwatch/concepts.html#using-test-globals">Using Test Globals</a></li>
 </ul>
 
+<<<<<<< HEAD
 [1]:    /gettingstarted/installation/#install-webdriver
 [2]:    https://www.npmjs.com/package/geckodriver
 [3]:    https://www.npmjs.com/package/chromedriver
@@ -217,3 +218,49 @@ Assuming you have downloaded or installed the ChromeDriver service, the simplest
 ### Recommended content
 - [Reference > All configuration settings](https://nightwatchjs.org/guide/reference/settings.html)
 - [Reference > Configuration defaults](https://nightwatchjs.org/guide/reference/defaults.html)
+=======
+<div class="sample-test">
+
+<pre><code class="language-javascript">module.exports = {
+  // An array of folders (excluding subfolders) where your tests are located;
+  // if this is not specified, the test source must be passed as the second argument to the test runner.
+  src_folders: [],
+
+  webdriver: {
+    start_process: true,
+    port: 4444,
+    server_path: require('geckodriver').path,
+    cli_args: [
+      // very verbose geckodriver logs
+      // '-vv'
+    ]
+  },
+
+  test_settings: {
+    default: {
+      launch_url: 'https://nightwatchjs.org',
+      desiredCapabilities : {
+        browserName : 'firefox',
+        alwaysMatch: {
+          // Enable this if you encounter unexpected SSL certificate errors in Firefox
+          // acceptInsecureCerts: true,
+          'moz:firefoxOptions': {
+            args: [
+              // '-headless',
+              // '-verbose'
+            ],
+          }
+        }
+      }
+    }
+  }
+};</code></pre>
+
+</div>
+
+
+[1]:	/gettingstarted/installation/#install-webdriver
+[2]:	https://www.npmjs.com/package/geckodriver
+[3]:	https://www.npmjs.com/package/chromedriver
+[4]:	https://www.npmjs.com/package/selenium-server
+>>>>>>> cf32ae704f3d7552a8488540f1654b955e1038cb
